@@ -22,7 +22,8 @@ Below is a list of the projects included in this repository:
 
 1. **HelloWorld** - A basic "Hello, World!" program.
 2. **Calculator** - A simple calculator to demonstrate basic arithmetic operations.
-3. **Dice** - A random number generator that "rolls" a dice. Compete against the computer and try to get a higher score.
+3. **Dice** - A simple game that "rolls" a dice. Compete against the computer and try to get a higher score.
+4. **Random Number Guesser** - A game generates a random number between 1 and 100, and allows the player 5 tries to guess the correct number.
 
 Feel free to browse the individual project folders for detailed descriptions and code examples.
 
