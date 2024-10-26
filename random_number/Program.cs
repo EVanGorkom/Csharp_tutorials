@@ -8,12 +8,12 @@ namespace Random_Number_Guesser
         {
             Random random = new Random();
             int random_number = random.Next(1, 101);
-            int num_of_tries = 5;
+            int num_of_tries = 6;
             int guess_number;
 
             Console.WriteLine("Welcome to the random number guesser game.");
             Console.WriteLine("The computer has chosen a number between 1 - 100.");
-            Console.WriteLine("You'll have 5 tries to guess the number correctly.");
+            Console.WriteLine("You'll have 6 tries to guess the number correctly.");
 
             for (int i = 0; i < num_of_tries; i++)
             {
