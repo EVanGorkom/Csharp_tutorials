@@ -24,6 +24,7 @@ Below is a list of the projects included in this repository:
 2. **Calculator** - A simple calculator to demonstrate basic arithmetic operations.
 3. **Dice** - A simple game that "rolls" a dice. Compete against the computer and try to get a higher score.
 4. **Random Number Guesser** - A game generates a random number between 1 and 100, and allows the player 5 tries to guess the correct number.
+5. **Area Calculator** - A simple calculator meant to take multiple inputs and automatically calculate the area of either a circle or a rectangle.
 
 Feel free to browse the individual project folders for detailed descriptions and code examples.
 
