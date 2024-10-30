@@ -26,6 +26,7 @@ Below is a list of the projects included in this repository:
 4. **Random Number Guesser** - A game generates a random number between 1 and 100, and allows the player 5 tries to guess the correct number.
 5. **Area Calculator** - A simple calculator meant to take multiple inputs and automatically calculate the area of either a circle or a rectangle.
 6. **Turn Based Adventure** - A basic combat simulator for a turn based adventure game (console inputs/outputs only).
+7. **Rock Paper Scissors** - The game of rock-paper-scissors with the user playing against the computer.
 
 Feel free to browse the individual project folders for detailed descriptions and code examples.
 
