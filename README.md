@@ -27,6 +27,7 @@ Below is a list of the projects included in this repository:
 5. **Area Calculator** - A simple calculator meant to take multiple inputs and automatically calculate the area of either a circle or a rectangle.
 6. **Turn Based Adventure** - A basic combat simulator for a turn based adventure game (console inputs/outputs only).
 7. **Rock Paper Scissors** - The game of rock-paper-scissors with the user playing against the computer.
+8. **To Do** - A to do list application.
 
 Feel free to browse the individual project folders for detailed descriptions and code examples.
 
