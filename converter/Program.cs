@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Converter
 {
@@ -9,6 +10,14 @@ namespace Converter
             string option;
             string startingCurrency;
             string endingCurrency;
+            float startingAmount;
+            float endingAmount;
+
+            Dictionary<string, float> currencyConversion = new Dictionary<string, float>();
+            currencyConversion["u"] = 1.0f;
+            currencyConversion["y"] = 150.0f;
+            currencyConversion["e"] = 0.92f;
+            currencyConversion["b"] = 0.77f;
 
             Console.WriteLine("Welcome to the Converter application!");
 
@@ -41,6 +50,14 @@ namespace Converter
                 Console.WriteLine("Which currency would you like to end with?");
                 Console.WriteLine("Press 'u' for USD, 'y' for Yen, 'e' for Euro, or 'b' for Pound.");
                 endingCurrency = Console.ReadLine();
+
+                Console.WriteLine("\nHow much would you like to convert? \n(Note: No need for commas if converting several thousand or more.)");
+                startingAmount = Convert.ToInt32(Console.ReadLine());
+
+                float amountInUSD = startingAmount / currencyConversion[startingCurrency];
+
+                endingAmount = amountInUSD * currencyConversion[endingCurrency];
+                Console.WriteLine(startingAmount + " " + startingCurrency + " is approximately equal to " + endingAmount + " " + endingCurrency);
             }
 
             else if (option == "t")
