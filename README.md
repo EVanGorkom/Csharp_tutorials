@@ -28,6 +28,7 @@ Below is a list of the projects included in this repository:
 6. **Turn Based Adventure** - A basic combat simulator for a turn based adventure game (console inputs/outputs only).
 7. **Rock Paper Scissors** - The game of rock-paper-scissors with the user playing against the computer.
 8. **To Do** - A to do list application with read, write, and deletion properties.
+9. **Temperature / Currency Converter** - A simple application that takes an initial value and converts it to a desired output type.
 
 Feel free to browse the individual project folders for detailed descriptions and code examples.
 
