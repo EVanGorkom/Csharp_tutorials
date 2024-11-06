@@ -42,10 +42,24 @@ namespace Converter
             if (option == "c")
             {
                 Console.WriteLine("\nYou selected the currency converter.");
-                Console.WriteLine("The currency converter has these currencies available:\n- USD\n- Yen\n- Euro\n- British Pound");
-                Console.WriteLine("Which currency would you like to start with?");
-                Console.WriteLine("Press 'u' for USD, 'y' for Yen, 'e' for Euro, or 'b' for Pound.");
-                startingCurrency = Console.ReadLine();
+
+                while (true)
+                {
+                    Console.WriteLine("The currency converter has these currencies available:\n- USD\n- Yen\n- Euro\n- British Pound");
+                    Console.WriteLine("Which currency would you like to start with?");
+                    Console.WriteLine("Press 'u' for USD, 'y' for Yen, 'e' for Euro, or 'b' for Pound.");
+                    
+                    startingCurrency = Console.ReadLine();
+                }
+
+                while (true)
+                {
+                    Console.WriteLine("Enter the code for the starting currency (u/y/e/b):");
+                    startingCurrency = Console.ReadLine().ToLower();
+                    if (currencyConversion.ContainsKey(startingCurrency)) break;
+                    Console.WriteLine("Invalid currency code. Please enter a valid option.");
+                }
+
 
                 Console.WriteLine("Which currency would you like to end with?");
                 Console.WriteLine("Press 'u' for USD, 'y' for Yen, 'e' for Euro, or 'b' for Pound.");
