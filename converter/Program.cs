@@ -42,16 +42,9 @@ namespace Converter
             if (option == "c")
             {
                 Console.WriteLine("\nYou selected the currency converter.");
+                Console.WriteLine("Available currencies:\n- USD (u)\n- Yen (y)\n- Euro (e)\n- British Pound (b)");
 
-                while (true)
-                {
-                    Console.WriteLine("The currency converter has these currencies available:\n- USD\n- Yen\n- Euro\n- British Pound");
-                    Console.WriteLine("Which currency would you like to start with?");
-                    Console.WriteLine("Press 'u' for USD, 'y' for Yen, 'e' for Euro, or 'b' for Pound.");
-                    
-                    startingCurrency = Console.ReadLine();
-                }
-
+                // Input for starting currency
                 while (true)
                 {
                     Console.WriteLine("Enter the code for the starting currency (u/y/e/b):");
@@ -60,18 +53,27 @@ namespace Converter
                     Console.WriteLine("Invalid currency code. Please enter a valid option.");
                 }
 
+                // Input for ending currency
+                while (true)
+                {
+                    Console.WriteLine("Enter the code for the ending currency (u/y/e/b):");
+                    endingCurrency = Console.ReadLine().ToLower();
+                    if (currencyConversion.ContainsKey(endingCurrency)) break;
+                    Console.WriteLine("Invalid currency code. Please enter a valid option.");
+                }
 
-                Console.WriteLine("Which currency would you like to end with?");
-                Console.WriteLine("Press 'u' for USD, 'y' for Yen, 'e' for Euro, or 'b' for Pound.");
-                endingCurrency = Console.ReadLine();
+                // Input for amount to convert
+                Console.WriteLine("\nEnter the amount to convert:");
+                while (!float.TryParse(Console.ReadLine(), out startingAmount))
+                {
+                    Console.WriteLine("Invalid amount. Please enter a numeric value.");
+                }
 
-                Console.WriteLine("\nHow much would you like to convert? \n(Note: No need for commas if converting several thousand or more.)");
-                startingAmount = Convert.ToInt32(Console.ReadLine());
-
+                // Conversion logic
                 float amountInUSD = startingAmount / currencyConversion[startingCurrency];
-
                 endingAmount = amountInUSD * currencyConversion[endingCurrency];
-                Console.WriteLine(startingAmount + " " + startingCurrency + " is approximately equal to " + endingAmount + " " + endingCurrency);
+
+                Console.WriteLine($"\n{startingAmount} {startingCurrency.ToUpper()} is approximately equal to {endingAmount:F2} {endingCurrency.ToUpper()}");
             }
 
             else if (option == "t")
