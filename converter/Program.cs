@@ -79,7 +79,24 @@ namespace Converter
             else if (option == "t")
             {
                 Console.WriteLine("\nYou selected the temperature converter.");
-                Console.WriteLine("");
+                Console.WriteLine("Available temperatures:\n- Kelvin (k)\n- Farenheit (f)\n- Celcius (c)");
+
+                // Input for starting temp
+                while (true)
+                {
+                    Console.WriteLine("Enter the code for the starting temperature (k/f/c):");
+                    startingTemp = Console.ReadLine().ToLower();
+                    if (tempConversion.ContainsKey(startingTemp)) break;
+                    Console.WriteLine("Invalid currency code. Please enter a valid option.");
+                }
+
+                // Input for ending currency
+                while (true)
+                {
+                    Console.WriteLine("Enter the code for the ending temperature (k/f/c):")
+                    endingTemp = Console.ReadLine().ToLower();
+                    if ()
+                }
             }
         }
     }
