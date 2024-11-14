@@ -29,6 +29,7 @@ Below is a list of the projects included in this repository:
 7. **Rock Paper Scissors** - The game of rock-paper-scissors with the user playing against the computer.
 8. **To Do** - A to do list application with read, write, and deletion properties.
 9. **Temperature / Currency Converter** - A simple application that takes an initial value and converts it to a desired output type.
+10. **Quiz Game** - A simple quiz that asks various questions about cats.
 
 Feel free to browse the individual project folders for detailed descriptions and code examples.
 
