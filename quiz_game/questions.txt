@@ -1,3 +1,16 @@
-This is a 
-text 
-file!
+What is the largest breed of domestic cat?
+>Maine Coon
+Bengal
+Ragdoll
+What is the term for the involuntary kneading motion cats often do with their paws?
+Purring
+Napping
+>kneading
+What is the back of a cat's neck commonly called?
+Nape
+>Scruff
+Necking
+Cats are what type of eaters?
+Omnivores
+>Carnivores
+Herbivores
