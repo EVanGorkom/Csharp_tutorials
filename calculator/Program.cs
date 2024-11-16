@@ -5,44 +5,61 @@ namespace Calculator
     class Program{
         static void Main(string[] args)
         {
-            int num1;
-            int num2;
-            int result = 0;
+            float num1;
+            float num2;
+            float result;
+            
             string answer;
-
+            
             Console.WriteLine("Hello, welcome to the calculator program!");
-            Console.WriteLine("Please enter your first number:");
             
-            num1 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Please enter your first number.");
+            num1 = float.Parse(Console.ReadLine());
             
-            Console.WriteLine("Please enter your second number:");
+            Console.WriteLine("Please enter your second number.");
+            num2 = float.Parse(Console.ReadLine());
             
-            num2 = Convert.ToInt32(Console.ReadLine());
-
             Console.WriteLine("What type of operation would you like to do?");
-            Console.WriteLine("Please enter 'a' for addition, 's' for subtraction, 'm' for multiplication, or 'd' for division.");
+            Console.WriteLine("Please enter a for addition, s for subtraction, m for multiplication or any other key for division.");
+            
             answer = Console.ReadLine();
-
-            if (answer == "a") 
+            answer = answer.ToLower();
+            
+            if (answer == "a")
             {
                 result = num1 + num2;
             }
             else if (answer == "s") 
             {
-                result = num1 - num2;
+                result = num1 - num2; 
             }
             else if (answer == "m") 
             {
-                result = num1 * num2;
+                result = num1 * num2; 
             }
-            else if (answer == "d") 
+            else 
             {
-                result = num1 / num2;
+                if (num2 != 0) 
+                {
+                    result = num1 / num2;
+                }
+                else
+                {
+                    result = float.NaN;
+                }
             }
-
-            Console.WriteLine("The result is " + result);
-            Console.WriteLine("Thanks for using the calculator program.");
-
+            
+            if (float.IsNaN(result))
+            {
+                Console.WriteLine("Invalid operation - cannot divide by 0!");
+            }
+            else 
+            {
+                Console.WriteLine("The result is " + result); 
+            }
+            
+            Console.WriteLine("Thank you for using the calculator program!");
+            
             Console.ReadKey();
         }
     }
